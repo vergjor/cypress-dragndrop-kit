@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "target": "es2020",
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+   "outDir": "./dist",
+    "types": [
+      "./support",
+      "cypress",
+      "node",
+    ],
+  },
+  "include": [
+    "**/*.ts",
+    "support/*.ts",
+  ],
+}
