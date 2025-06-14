@@ -1,0 +1,27 @@
+name: PR pipeline checks
+on:
+  pull_request:
+
+jobs:
+  build_package:
+    name: Building the current package version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Switch to branch
+        uses: actions/checkout@v4
+
+      - name: Build the package
+        run: npm run build
+
+  test_package:
+    name: Executing E2E tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Switch to branch
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        uses: cypress-io/github-action@v6.10.0
+        
+
+    
