@@ -4,6 +4,7 @@
   "description": "Custom command meant for interacting with draggable elements in the UI",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
+  "files": ["dist"],
   "scripts": {
     "build": "rm -rf dist/* && tsc",
     "publish": "npx semantic-release",

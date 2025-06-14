@@ -4,12 +4,12 @@
     "lib": ["ES6", "DOM"],
     "module": "CommonJS",
     "declaration": true,
+    "rootDir": "src",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "types": ["cypress"],
   },
-  "files": ["dist/"],
   "include": ["src/"],
   "exclude": ["cypress", "dist", "cypress.config.ts"]
 }
