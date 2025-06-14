@@ -1,4 +1,6 @@
-import { DraggableOption } from "./types";
+/// <reference types="cypress" />
+
+import { DraggableOption } from "./utils";
 
 declare global {
     namespace Cypress {
@@ -24,3 +26,5 @@ declare global {
         }
     }
 }
+
+export {}

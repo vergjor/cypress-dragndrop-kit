@@ -1,5 +1,8 @@
-import { DraggableOption } from "./types";
-import { params } from "./utils";
+/// <reference types="cypress" />
+
+import "./types";
+import { DraggableOption, params } from "./utils";
+
 
 Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targetElement, options) => {
   cy.get(targetElement).first().then(([target]) => {
