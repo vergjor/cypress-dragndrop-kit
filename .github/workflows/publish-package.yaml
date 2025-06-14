@@ -19,7 +19,7 @@ jobs:
         run: npm run build
   
       - name: Bump and publish package
-        run: npx semantic-release
+        run: npm run publish
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

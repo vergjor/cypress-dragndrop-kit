@@ -6,6 +6,7 @@
   "types": "dist/index.d.js",
   "scripts": {
     "build": "rm -rf dist/* && tsc",
+    "publish": "npx semantic-release",
     "test": "npx cypress run",
     "test:open": "npx cypress open"
   },
@@ -25,5 +26,13 @@
     "@types/node": "^24.0.1",
     "semantic-release": "^24.2.5",
     "typescript": "^5.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vergjor/cypress-dragndrop-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vergjor/cypress-dragndrop-kit/issues"
+  },
+  "homepage": "https://github.com/vergjor/cypress-dragndrop-kit#readme"
 }
