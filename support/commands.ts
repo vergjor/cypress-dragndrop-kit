@@ -1,6 +1,7 @@
+import { DraggableOption } from "./types";
 import { params } from "./utils";
 
-Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targetElement) => {
+Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targetElement, options) => {
   cy.get(targetElement).first().then(([target]) => {
     cy.wrap(sourceElement).first().then(([source]) => {
 
@@ -8,7 +9,9 @@ Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targe
       let targetCoordinates = target.getBoundingClientRect();
 
       const isScrollingDown = targetCoordinates.top - sourceCoordinates.top > 0;
-      if (isScrollingDown) {
+      const isScrollingRight = targetCoordinates.right - sourceCoordinates.right > 0;
+
+      if (isScrollingDown || isScrollingRight) {
         cy.get(targetElement).first().scrollIntoView();
       } else {
         const startX = sourceCoordinates.left + sourceCoordinates.width / 2;
@@ -22,6 +25,7 @@ Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targe
 
       cy.wrap(source)
         .trigger("mousedown", params(sourceCoordinates))
+        .wait(options?.pressDelay ?? 0)
         .trigger("mousemove", params(sourceCoordinates, 10));
 
       cy.get("body")
@@ -32,6 +36,6 @@ Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targe
   });
 });
 
-Cypress.Commands.add("dragAndDrop", (sourceElement: string, targetElement: string) => {
-  cy.get(sourceElement).dragTo(targetElement);
+Cypress.Commands.add("dragAndDrop", (sourceElement: string, targetElement: string, options?: DraggableOption) => {
+  cy.get(sourceElement).dragTo(targetElement, options);
 });
