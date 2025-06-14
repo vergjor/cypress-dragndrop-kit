@@ -25,8 +25,11 @@ import 'cypress-dragndrop-kit';
 
 ### ✨ Available commands
 
-- `dragTo(targetElementLocator, options)`: Custom child command for dragging and dropping a chained element to a specified element location
-- `dragAndDrop(sourceElementLocator, targetElementLocator, options)`: Custom command for dragging and dropping from one element location to another
+  | Command | Type |	Description |
+  | --- | --- |	--- |
+  | `dragTo(targetElementLocator, options)` |	`Child command` |	Custom child command for dragging and dropping a chained element to a specified element location |
+  | `dragAndDrop(sourceElementLocator, targetElementLocator, options)` |	`Parent command` |	Custom command for dragging and dropping from one element location to another |
+
 
 <br/>
 

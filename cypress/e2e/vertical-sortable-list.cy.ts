@@ -1,3 +1,6 @@
+/// <reference types="cypress" />
+/// <reference path="../support/e2e.ts" />
+
 describe('Vertical sortable list', { retries: 2 }, () => {
     beforeEach(() => {
         cy.visit('/iframe.html?args=&id=presets-sortable-vertical--basic-setup&viewMode=story');

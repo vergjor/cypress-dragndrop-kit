@@ -1,3 +1,6 @@
+/// <reference types="cypress" />
+/// <reference path="../support/e2e.ts" />
+
 describe('Swappable grid', { retries: 2 }, () => {
     beforeEach(() => {
         cy.visit('/iframe.html?args=&id=presets-sortable-grid--swappable&viewMode=story');
