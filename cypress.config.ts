@@ -9,5 +9,6 @@ export default defineConfig({
     },
     supportFile: './support/e2e.ts',
     specPattern: './tests/*',
+    baseUrl: 'https://master--5fc05e08a4a65d0021ae0bf2.chromatic.com',
   },
 });

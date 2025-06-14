@@ -1,6 +1,6 @@
 describe('Vertical sortable list', { retries: 2 }, () => {
     beforeEach(() => {
-        cy.visit('https://master--5fc05e08a4a65d0021ae0bf2.chromatic.com/iframe.html?args=&id=presets-sortable-vertical--basic-setup&viewMode=story');
+        cy.visit('/iframe.html?args=&id=presets-sortable-vertical--basic-setup&viewMode=story');
         cy.get('li').should('have.length.above', 1);
     })
 
