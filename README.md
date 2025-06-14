@@ -25,12 +25,22 @@ import 'cypress-dragndrop-kit';
 
 ### ✨ Available commands
 
-- `dragTo(targetElementLocator)`: Custom child command for dragging and dropping a chained element to a specified element location
-- `dragAndDrop(sourceElementLocator, targetElementLocator)`: Custom command for dragging and dropping from one element location to another 
+- `dragTo(targetElementLocator, options)`: Custom child command for dragging and dropping a chained element to a specified element location
+- `dragAndDrop(sourceElementLocator, targetElementLocator, options)`: Custom command for dragging and dropping from one element location to another
 
 <br/>
 
-### ⚙️ Examples
+### ⚙️ Command Options
+  
+The `options` input parameter is an optional object for handling specific cases related to the drag-and-drop functionality.
+
+  | Option | Type |	Default |	Description |
+  | --- | --- |	--- |	--- |
+  | `pressDelay` |	`number` |	`0`	| Time delay (in milliseconds) after mouse down event, before initiating the dragging of the element. Useful for simulating long-press behavior |
+
+<br/>
+
+### 📘 Examples
 
 ```typescript
 // Usage of "dragTo(target)"
