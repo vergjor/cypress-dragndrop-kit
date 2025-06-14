@@ -27,19 +27,29 @@ import 'cypress-dragndrop-kit';
 
   | Command | Type |	Description |
   | --- | --- |	--- |
-  | `dragTo(targetElementLocator, options)` |	`Child command` |	Custom child command for dragging and dropping a chained element to a specified element location |
-  | `dragAndDrop(sourceElementLocator, targetElementLocator, options)` |	`Parent command` |	Custom command for dragging and dropping from one element location to another |
+  | `cy.dragTo(target, options)` |	`Child command` |	Custom child command for dragging and dropping a chained element to a specified element location |
+  | `cy.dragAndDrop(source, target, options)` |	`Parent command` |	Custom command for dragging and dropping from one element location to another |
 
 
 <br/>
 
-### ⚙️ Command Options
+### ⚙️ Input parameters
   
-The `options` input parameter is an optional object for handling specific cases related to the drag-and-drop functionality.
+#### Required
+
+  | Parameter name | Type |	Default |	Description |
+  | --- | --- |	--- |	--- |
+  | `sourceElement` |	`string` |	/	| locator for the `source` element |
+  | `targetElement` |	`string` |	/	| locator for the `target` element |
+
+#### Optional
+
+The `options` parameter is the third and only optional argument — an object used to configure specific aspects of the drag-and-drop behavior.
 
   | Option | Type |	Default |	Description |
   | --- | --- |	--- |	--- |
   | `pressDelay` |	`number` |	`0`	| Time delay (in milliseconds) after mouse down event, before initiating the dragging of the element. Useful for simulating long-press behavior |
+
 
 <br/>
 
