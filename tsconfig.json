@@ -7,7 +7,6 @@
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "types": ["cypress"]
   },
   "include": ["src/"],
   "exclude": ["cypress", "dist", "cypress.config.ts"]
