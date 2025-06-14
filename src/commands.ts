@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
+/// <reference path="./types.d.ts" />
 
-import "./types";
 import { DraggableOption, params } from "./utils";
 
 
