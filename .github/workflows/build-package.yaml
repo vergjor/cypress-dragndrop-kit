@@ -2,6 +2,10 @@ name: PR pipeline checks
 on:
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   build_package:
     name: Building the current package version
