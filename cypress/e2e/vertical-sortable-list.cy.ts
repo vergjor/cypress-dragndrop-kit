@@ -8,14 +8,14 @@ describe('Vertical sortable list', { retries: 2 }, () => {
     })
 
     context('dragTo()', () => {
-        it('should be able to move the 3rd element on the 47th position within the list by using "dragTo()"', () => {
+        it('should be able to move the 3rd element on the 47th position within the list"', () => {
             cy.get('[data-id="3"]').dragTo('[data-id="47"]');
 
             cy.get('[data-id="47"]').should('have.attr', 'data-index', 46);
             cy.get('[data-id="3"]').should('have.attr', 'data-index', 47);
         })
 
-        it('should be able to move the 16th element on the 12th position within the list by using "dragTo()"', () => {
+        it('should be able to move the 16th element on the 12th position within the list"', () => {
             cy.get('[data-id="16"]').dragTo('[data-id="12"]');
 
             cy.get('[data-id="16"]').should('have.attr', 'data-index', 12);
@@ -24,14 +24,14 @@ describe('Vertical sortable list', { retries: 2 }, () => {
     })
 
     context('dragAndDrop()', () => {
-        it('should be able to move the 3rd element on the 47th position within the list by using "dragTo()"', () => {
+        it('should be able to move the 3rd element on the 47th position within the list"', () => {
             cy.dragAndDrop('[data-id="3"]', '[data-id="47"]');
 
             cy.get('[data-id="47"]').should('have.attr', 'data-index', 46);
             cy.get('[data-id="3"]').should('have.attr', 'data-index', 47);
         })
 
-        it('should be able to move the 16th element on the 12th position within the list by using "dragTo()"', () => {
+        it('should be able to move the 16th element on the 12th position within the list"', () => {
             cy.dragAndDrop('[data-id="16"]', '[data-id="12"]');
 
             cy.get('[data-id="16"]').should('have.attr', 'data-index', 12);
