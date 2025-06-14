@@ -74,10 +74,10 @@ it('should be able to drag and drop an item by using "dragAndDrop()"', () => {
 
 // Usage of "dragTo(target, { pressDelay })"
 it('should be able to drag and drop an item after a 2 second delay by using "dragTo()"', () => {
-    cy.get('[data-id="47"]').dragTo('[data-id="3"]', { pressDelay: 2000 });
+  cy.get('[data-id="47"]').dragTo('[data-id="3"]', { pressDelay: 2000 });
 
-    cy.get('[data-id="47"]').should('have.attr', 'data-index', 3);
-    cy.get('[data-id="3"]').should('have.attr', 'data-index', 4);
+  cy.get('[data-id="47"]').should('have.attr', 'data-index', 3);
+  cy.get('[data-id="3"]').should('have.attr', 'data-index', 4);
 })
 ```
 
