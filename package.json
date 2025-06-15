@@ -1,6 +1,6 @@
 {
   "name": "cypress-dragndrop-kit",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Custom command meant for interacting with draggable elements in the UI",
   "main": "dist/index.js",
   "types": "dist/types.d.ts",
