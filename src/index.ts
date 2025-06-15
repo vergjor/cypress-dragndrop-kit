@@ -1,8 +1,11 @@
 /// <reference types="cypress" />
 /// <reference path="./types.d.ts" />
 
-import { DraggableOption, params } from "./utils";
-
+import {
+  DraggableOption,
+  calculateCoordinates, 
+  params,
+} from "./utils";
 
 Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targetElement, options) => {
   cy.get(targetElement).first().then(([target]) => {
@@ -17,13 +20,8 @@ Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targe
       if (isScrollingDown || isScrollingRight) {
         cy.get(targetElement).first().scrollIntoView();
       } else {
-        const startX = sourceCoordinates.left + sourceCoordinates.width / 2;
-        const startY = sourceCoordinates.top + sourceCoordinates.height / 2;
-        sourceCoordinates = { ...sourceCoordinates, x: startX, y: startY };
-
-        const endX = targetCoordinates.left + targetCoordinates.width / 2;
-        const endY = targetCoordinates.top + targetCoordinates.height / 2;
-        targetCoordinates = { ...targetCoordinates, x: endX, y: endY };
+        sourceCoordinates = calculateCoordinates(sourceCoordinates);
+        targetCoordinates = calculateCoordinates(targetCoordinates);
       }
 
       cy.wrap(source)

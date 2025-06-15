@@ -10,3 +10,10 @@ export const params = ({ x, y }: Coordinate, offset = 0) => ({
   clientY: y + offset,
   force: true,
 });
+
+export const calculateCoordinates = (coordinates: DOMRect) => {
+  const x = coordinates.left + coordinates.width / 2;
+  const y = coordinates.top + coordinates.height / 2;
+  
+  return { ...coordinates, x, y };
+}
