@@ -31,7 +31,7 @@ Cypress.Commands.add("dragTo", { prevSubject: 'element' }, (sourceElement, targe
 
       cy.get("body")
         .trigger("mousemove", params(targetCoordinates))
-        .wait(1000)
+        .wait(500)
         .trigger("mouseup", { force: true });
     });
   });
