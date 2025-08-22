@@ -2,6 +2,9 @@
 
 A lightweight, Cypress-native plugin that simplifies drag‑and‑drop and movement interactions in end-to-end tests. Perfect for testing sortable lists, draggable elements, and custom UI components.
 
+> **IMPORTANT**: 
+>  - Version `v1.0.11` and below of this package can be used with Cypress v14
+>  - Version `v1.1.0` can be used with Cypress v15
 
 <br/>
 
